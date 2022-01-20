@@ -1,0 +1,115 @@
+admin_search:
+  path: /admin/search
+  controller: App\Controller\Admin\AdminWriterController::adminSearch
+
+front_search:
+  path: search
+  controller: App\Controller\Front\ArticleController::frontSearch
+
+car_list:
+  path: cars
+  controller: App\Controller\Front\CarController::carList
+
+car_show:
+  path: car/{id}
+  controller: App\Controller\Front\CarController::carShow
+
+admin_delete_car:
+  path: admin/delete/car/{id}
+  controller: App\Controller\Admin\AdminCarController::adminDeleteCar
+
+admin_car_create:
+  path: admin/create/car
+  controller: App\Controller\Admin\AdminCarController::adminCarCreate
+
+admin_update_car:
+  path: admin/update/car/{id}
+  controller: App\Controller\Admin\AdminCarController::adminUpdateCar
+
+admin_car_show:
+  path: admin/car/{id}
+  controller: App\Controller\Admin\AdminCarController::adminShowCar
+
+admin_car_list:
+  path: admin/cars
+  controller: App\Controller\Admin\AdminCarController::adminListCar
+
+brand_list:
+  path: brands
+  controller: App\Controller\Front\BrandController::brandList
+
+brand_show:
+  path: brand/{id}
+  controller: App\Controller\Front\BrandController::brandShow
+
+admin_brand_list:
+  path: admin/brands
+  controller: App\Controller\Admin\AdminBrandController::brandList
+
+admin_brand_show:
+  path: admin/brand/{id}
+  controller: App\Controller\Admin\AdminBrandController::brandShow
+
+update_brand:
+  path: admin/update/brand/{id}
+  controller: App\Controller\Admin\AdminBrandController::brandUpdate
+
+create_brand:
+  path: admin/create/brand
+  controller: App\Controller\Admin\AdminBrandController::createBrand
+
+delete_brand:
+  path: admin/delete/brand/{id}
+  controller: App\Controller\Admin\AdminBrandController::deletBrand
+
+groupe_list:
+  path: groupes
+  controller: App\Controller\Front\CategoryController::groupeList
+
+groupe_show:
+  path: groupe/{id}
+  controller: App\Controller\Front\CategoryController::groupeShow
+
+admin_groupe_list:
+  path: admin/groupes
+  controller: App\Controller\Admin\AdminGroupeController::adminListGroupe
+
+admin_groupe_create:
+  path: admin/create/groupe/
+  controller: App\Controller\Admin\AdminGroupeController::adminGroupeCreate
+
+admin_delete_groupe:
+  path: admin/delete/groupe/{id}
+  controller: App\Controller\Admin\AdminGroupeController::adminDeleteGroupe
+
+admin_groupe_show:
+  path: admin/groupe/{id}
+  controller: App\Controller\Admin\AdminGroupeController::adminShowGroupe
+
+create_image:
+  path: admin/create/image
+  controller: App\Controller\Admin\AdminImageController::createImage
+
+update_image:
+  path: admin/update/image/{id}
+  controller: App\Controller\Admin\AdminImageController::updateImage
+
+delete_image:
+  path: admin/delete/image/{id}
+  controller: App\Controller\Admin\AdminImageController::deleteImage
+
+image_list:
+  path: admin/images
+  controller: App\Controller\Admin\AdminImageController::imageList
+
+image_show:
+  path: admin/image/{id}
+  controller: App\Controller\Admin\AdminImageController::imageShow
+
+contact:
+  path: contact
+  controller: App\Controller\Front\MessageController::contact
+
+message:
+  path: message
+  controller: App\Controller\Front\MessageController::message
