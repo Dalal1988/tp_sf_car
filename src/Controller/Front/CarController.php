@@ -111,7 +111,7 @@ class CarController extends AbstractController
 
         $like = new Like();
 
-        $like->setArticle($article);
+        $like->setCar($car);
         $like->setUser($user);
 
         $entityManagerInterface->persist($like);
@@ -173,7 +173,7 @@ class CarController extends AbstractController
             $entityManagerInterface->remove($like);
 
             $dislike = new Dislike();
-            $dislike->setArticle($car);
+            $dislike->setCar($car);
             $dislike->setUser($user);
 
             $entityManagerInterface->persist($dislike);
