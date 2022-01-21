@@ -16,23 +16,23 @@ car_show:
 
 admin_delete_car:
   path: admin/delete/car/{id}
-  controller: App\Controller\Admin\AdminCarController::adminDeleteCar
+  controller: App\Controller\Admin\AdminCarController::deleteCar
 
 admin_car_create:
   path: admin/create/car
-  controller: App\Controller\Admin\AdminCarController::adminCarCreate
+  controller: App\Controller\Admin\AdminCarController::createCar
 
 admin_update_car:
   path: admin/update/car/{id}
-  controller: App\Controller\Admin\AdminCarController::adminUpdateCar
+  controller: App\Controller\Admin\AdminCarController::carUpdate
 
 admin_car_show:
   path: admin/car/{id}
-  controller: App\Controller\Admin\AdminCarController::adminShowCar
+  controller: App\Controller\Admin\AdminCarController::carShow
 
 admin_car_list:
   path: admin/cars
-  controller: App\Controller\Admin\AdminCarController::adminListCar
+  controller: App\Controller\Admin\AdminCarController::carList
 
 brand_list:
   path: brands
@@ -44,23 +44,23 @@ brand_show:
 
 admin_brand_list:
   path: admin/brands
-  controller: App\Controller\Admin\AdminBrandController::brandList
+  controller: App\Controller\Admin\AdminBrandController::adminListBrand
 
 admin_brand_show:
   path: admin/brand/{id}
-  controller: App\Controller\Admin\AdminBrandController::brandShow
+  controller: App\Controller\Admin\AdminBrandController::adminShowBrand
 
 update_brand:
   path: admin/update/brand/{id}
-  controller: App\Controller\Admin\AdminBrandController::brandUpdate
+  controller: App\Controller\Admin\AdminBrandController::adminUpdateBrand
 
 create_brand:
   path: admin/create/brand
-  controller: App\Controller\Admin\AdminBrandController::createBrand
+  controller: App\Controller\Admin\AdminBrandController::adminBrandCreate
 
 delete_brand:
   path: admin/delete/brand/{id}
-  controller: App\Controller\Admin\AdminBrandController::deletBrand
+  controller: App\Controller\Admin\AdminBrandController::adminDeleteBrand
 
 groupe_list:
   path: groupes
@@ -68,23 +68,27 @@ groupe_list:
 
 groupe_show:
   path: groupe/{id}
-  controller: App\Controller\Front\GroupController::groupeShow
+  controller: App\Controller\Front\GroupController::groupShow
 
 admin_groupe_list:
   path: admin/groupes
-  controller: App\Controller\Admin\AdminGroupeController::adminListGroupe
+  controller: App\Controller\Admin\AdminGroupController::adminListGroup
 
 admin_groupe_create:
   path: admin/create/groupe/
-  controller: App\Controller\Admin\AdminGroupeController::adminGroupeCreate
+  controller: App\Controller\Admin\AdminGroupController::adminGroupCreate
+
+admin_groupe_update:
+  path: admin/update/groupe/{id}
+  controller: App\Controller\Admin\AdminGroupController::adminUpdateGroup
 
 admin_delete_groupe:
   path: admin/delete/groupe/{id}
-  controller: App\Controller\Admin\AdminGroupeController::adminDeleteGroupe
+  controller: App\Controller\Admin\AdminGroupController::adminDeleteGroup
 
 admin_groupe_show:
   path: admin/groupe/{id}
-  controller: App\Controller\Admin\AdminGroupeController::adminShowGroupe
+  controller: App\Controller\Admin\AdminGroupController::adminShowGroup
 
 create_image:
   path: admin/create/image
@@ -104,7 +108,7 @@ image_list:
 
 image_show:
   path: admin/image/{id}
-  controller: App\Controller\Admin\AdminImageController::imageShow
+  controller: App\Controller\Admin\AdminImageController::image_show
 
 contact:
   path: contact

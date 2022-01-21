@@ -2,15 +2,19 @@
 
 {% block main %}
 
-	<h1>Contactez-nous</h1>
 
-	<form action="{{ path ('message') }}" method="post">
+<h1 class="h3 mb-3 fw-normal">Contactez-nous</h1>
+<form action="{{ path ('message') }}" method="post">
+	<div class="mb-3 justify-content-center">
+		<label for="exampleFormControlInput1" class="form-label">Email address</label>
+		<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+	</div>
+	<div class="mb-3 justify-content-center">
+		<label for="exampleFormControlTextarea1" class="form-label">Message</label>
+		<textarea class="form-control" name="message" id="message" rows="3"></textarea>
+	</div>
+	<button class="w-45 btn btn-lg btn-dark justify-content-center" type="submit" value="Envoyer">Envoyer</button>
 
-		<label for="message">Votre message</label>
-		<input type="text" name="message" id="message">
-		<input type="submit" value="Envoyer">
-
-	</form>
 
 
 {% endblock %}

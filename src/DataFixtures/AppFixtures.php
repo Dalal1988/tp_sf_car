@@ -43,7 +43,7 @@ class AppFixtures extends Fixture
             $manager->flush();
         }
 
-        for ($i = 0; $i < 8; $i++) {
+        for ($i = 0; $i < 10; $i++) {
             $group  = new Group();
 
             $group->setName($faker->word);
@@ -54,17 +54,17 @@ class AppFixtures extends Fixture
             $manager->flush();
         }
 
-        for ($i = 0; $i < 15; $i++) {
+        for ($i = 0; $i < 10; $i++) {
             $car = new Car();
 
-            $id_brand = rand(91, 100);
-            $id_group = rand(57, 64);
+            $id_brand = rand(51, 60);
+            $id_group = rand(41, 50);
 
             $brand = $this->brandRepository->find($id_brand);
             $group = $this->groupRepository->find($id_group);
 
             $car->setName($faker->word);
-            $car->setYear($faker->integer);
+            $car->setYear($faker->numberBetween(1990, 2021));
             $car->setEngine($faker->word);
             $car->setDescription($faker->text);
             $car->setBrand($brand);

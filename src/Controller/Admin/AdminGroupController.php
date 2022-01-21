@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Group;
 use App\Form\BrandType;
+use App\Form\GroupType;
 use App\Repository\GroupRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -44,7 +45,7 @@ class AdminGroupController extends AbstractController
             $entityManagerInterface->persist($group);
             $entityManagerInterface->flush();
 
-            return $this->redirectToRoute("admin_group_list");
+            return $this->redirectToRoute("admin_groupe_list");
         }
 
 
@@ -64,7 +65,7 @@ class AdminGroupController extends AbstractController
             $entityManagerInterface->persist($group);
             $entityManagerInterface->flush();
 
-            return $this->redirectToRoute("admin_group_list");
+            return $this->redirectToRoute("admin_groupe_list");
         }
 
         return $this->render("admin/groupForm.html.twig", ['groupForm' => $groupForm->createView()]);
@@ -82,6 +83,6 @@ class AdminGroupController extends AbstractController
 
         $entityManagerInterface->flush();
 
-        return $this->redirectToRoute("admin_group_list");
+        return $this->redirectToRoute("admin_groupe_list");
     }
 }

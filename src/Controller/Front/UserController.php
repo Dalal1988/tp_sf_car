@@ -61,7 +61,7 @@ class UserController extends AbstractController
             $mailerInterface->send($email);
 
 
-            return $this->redirectToRoute('article_list');
+            return $this->redirectToRoute('car_list');
         }
 
         return $this->render("front/userform.html.twig", ['userForm' => $userForm->createView()]);
@@ -123,4 +123,7 @@ class UserController extends AbstractController
 
         return $this->redirectToRoute('car_list');
     }
+
+    
+
 }

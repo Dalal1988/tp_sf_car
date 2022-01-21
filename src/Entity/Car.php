@@ -148,6 +148,7 @@ class Car
         return $this;
     }
 
+    
     /**
      * @return Collection|Like[]
      */
@@ -176,6 +177,16 @@ class Car
         }
 
         return $this;
+    }
+
+    public function isLikeByUser(User $user)
+    {
+
+        foreach ($this->likes as $like) {
+            if ($like->getUser() === $user) {
+                return true;
+            }
+        }
     }
 
     /**
@@ -208,33 +219,12 @@ class Car
         return $this;
     }
 
-    /**
-     * @return Collection|Image[]
-     */
-    public function getImages(): Collection
+    public function isDislikeByUser(User $user)
     {
-        return $this->images;
-    }
-
-    public function addImage(Image $image): self
-    {
-        if (!$this->images->contains($image)) {
-            $this->images[] = $image;
-            $image->setCar($this);
-        }
-
-        return $this;
-    }
-
-    public function removeImage(Image $image): self
-    {
-        if ($this->images->removeElement($image)) {
-            // set the owning side to null (unless already changed)
-            if ($image->getCar() === $this) {
-                $image->setCar(null);
+        foreach ($this->dislikes as $dislike) {
+            if ($dislike->getUser() === $user) {
+                return true;
             }
         }
-
-        return $this;
     }
 }

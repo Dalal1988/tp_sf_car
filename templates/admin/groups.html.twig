@@ -1,6 +1,6 @@
 {% extends "base.html.twig" %}
 
-{% block body %}
+{% block main %}
 
 
 <table class="table">
@@ -11,12 +11,12 @@
       <th scope="col">Country</th>
     </tr>
   </thead>
-  {% for groupe in groupes %}
+  {% for group in groups %}
   <tbody>
     <tr>
-      <th scope="row">{{ groupe.id }}</th>
-      <td>{{ groupe.name }}</td>
-      <td>{{ groupe.countrie }}</td>
+      <th scope="row">{{ group.id }}</th>
+      <td>{{ group.name }}</td>
+      <td>{{ group.countrie }}</td>
     </tr>
   </tbody>
   {% endfor %}

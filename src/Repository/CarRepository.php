@@ -41,6 +41,8 @@ class CarRepository extends ServiceEntityRepository
         return $query->getResult();
     }
 
+    
+
     // /**
     //  * @return Car[] Returns an array of Car objects
     //  */

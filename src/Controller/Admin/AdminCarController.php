@@ -43,7 +43,7 @@ class AdminCarController extends AbstractController
             $entityManagerInterface->persist($car);
             $entityManagerInterface->flush();
 
-            return $this->redirectToRoute('admin_car_list');
+            return $this->redirectToRoute('car_list');
         }
 
         return $this->render("admin/carForm.html.twig", ['carForm' => $carForm->createView()]);
@@ -65,13 +65,13 @@ class AdminCarController extends AbstractController
             $entityManagerInterface->persist($car);
             $entityManagerInterface->flush();
 
-            return $this->redirectToRoute('admin_car_list');
+            return $this->redirectToRoute('car_list');
         }
 
         return $this->render("admin/carForm.html.twig", ['carForm' => $carForm->createView()]);
     }
 
-    public function deletetCar(
+    public function deleteCar(
         $id,
         EntityManagerInterface $entityManagerInterface,
         CarRepository $carRepository
@@ -82,6 +82,16 @@ class AdminCarController extends AbstractController
 
         $entityManagerInterface->flush();
 
-        return $this->redirectToRoute("admin_car_list");
+        return $this->redirectToRoute("car_list");
     }
+
+    public function adminSearch(CarRepository $carRepository, Request $request)
+    {
+        $term = $request->query->get('term');
+
+        $cars = $carRepository->searchByTerm($term);
+
+        return $this->render('admin/search.html.twig', ['term' => $term, 'cars' => $cars]);
+    }
+
 }

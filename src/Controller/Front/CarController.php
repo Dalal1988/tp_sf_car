@@ -42,6 +42,7 @@ class CarController extends AbstractController
         return $this->render('front/search.html.twig', ['cars' => $cars, 'term' => $term]);
     }
 
+    
     /**
      * @Route("like/car/{id}", name="car_like")
      */

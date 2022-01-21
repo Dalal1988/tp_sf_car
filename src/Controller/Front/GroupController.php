@@ -17,8 +17,8 @@ class GroupController extends AbstractController
 
     public function groupShow($id, GroupRepository $groupRepository)
     {
-        $group = $groupRepository->find($id);
+        $groupe = $groupRepository->find($id);
 
-        return $this->render("front/group.html.twig", ['group' => $group]);
+        return $this->render("front/group.html.twig", ['groupe' => $groupe]);
     }
 }

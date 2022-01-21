@@ -1,14 +1,17 @@
-{% extends "admin/base.html.twig" %}
+{% extends "base.html.twig" %}
 
 {% block main %}
 
-	<h1>Le résultat de la recherche
-		{{ term }}
-		est :</h1>
+<div class="alert alert-dark" role="alert">
+	<h4 class="alert-heading">Le résultat de la recherche {{ term }} est :</h4>
+  	<hr>
+	  <p> 
+  		{% for car in cars %}
+			<h2>{{ car.name }}</h2> 
+			<p>{{ car.description }}</p>
+		{% endfor %}
+	</p>
+</div>
 
-	{% for car in cars %}
-		<h2>{{ car.name }}
-			{{ car.description }}</h2>
-	{% endfor %}
 
 {% endblock %}
