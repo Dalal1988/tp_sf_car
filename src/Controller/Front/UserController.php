@@ -37,8 +37,6 @@ class UserController extends AbstractController
 
             $plainPassword = $userForm->get('password')->getData();
             $user_email = $userForm->get('email')->getData();
-            $user_name = $userForm->get('name')->getData();
-            $user_firstname =  $userForm->get('firstname')->getData();
 
             $hashedPassword = $userPasswordHasherInterface->hashPassword($user, $plainPassword);
 
@@ -49,13 +47,13 @@ class UserController extends AbstractController
             $entityManagerInterface->flush();
 
             $email = (new TemplatedEmail())
-                ->from('test@test.com')
+                ->from('admin@test.com')
                 ->to($user_email)
                 ->subject('Inscription')
                 ->htmlTemplate('front/mail.html.twig')
                 ->context([
-                    'name' => $user_name,
-                    'firstname' => $user_firstname
+                    'email' => $user_email,
+                    'password' => $plainPassword
                 ]);
 
             $mailerInterface->send($email);
