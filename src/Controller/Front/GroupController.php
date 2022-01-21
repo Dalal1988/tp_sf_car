@@ -12,7 +12,7 @@ class GroupController extends AbstractController
     {
         $groupes = $groupRepository->findAll();
 
-        return $this->render("front/groupes.html.twig", ['groupes' => $groupes]);
+        return $this->render("front/groups.html.twig", ['groupes' => $groupes]);
     }
 
     public function groupShow($id, GroupRepository $groupRepository)

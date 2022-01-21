@@ -1,0 +1,10 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+
+		<h2>
+			<a href="{{ path ('brand_show', {'id' : brand.id }) }}">{{ brand.name }}</a>
+		</h2>
+
+{% endblock %}

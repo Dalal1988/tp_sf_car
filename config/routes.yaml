@@ -1,10 +1,10 @@
 admin_search:
   path: /admin/search
-  controller: App\Controller\Admin\AdminWriterController::adminSearch
+  controller: App\Controller\Admin\AdminCarController::adminSearch
 
 front_search:
   path: search
-  controller: App\Controller\Front\ArticleController::frontSearch
+  controller: App\Controller\Front\CarController::frontSearch
 
 car_list:
   path: cars
@@ -64,11 +64,11 @@ delete_brand:
 
 groupe_list:
   path: groupes
-  controller: App\Controller\Front\CategoryController::groupeList
+  controller: App\Controller\Front\GroupController::groupeList
 
 groupe_show:
   path: groupe/{id}
-  controller: App\Controller\Front\CategoryController::groupeShow
+  controller: App\Controller\Front\GroupController::groupeShow
 
 admin_groupe_list:
   path: admin/groupes

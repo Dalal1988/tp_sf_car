@@ -121,6 +121,6 @@ class UserController extends AbstractController
 
         $entityManagerInterface->flush();
 
-        return $this->redirectToRoute('article_list');
+        return $this->redirectToRoute('car_list');
     }
 }

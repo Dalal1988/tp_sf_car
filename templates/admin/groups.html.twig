@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Country</th>
+    </tr>
+  </thead>
+  {% for groupe in groupes %}
+  <tbody>
+    <tr>
+      <th scope="row">{{ groupe.id }}</th>
+      <td>{{ groupe.name }}</td>
+      <td>{{ groupe.countrie }}</td>
+    </tr>
+  </tbody>
+  {% endfor %}
+</table>
+		
+
+{% endblock %}

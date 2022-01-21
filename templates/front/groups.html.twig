@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+
+{% block main %}
+
+	{% for groupe in groupes %}
+		<h2>
+			<a href="{{ path ("groupe_show", {'id' : groupe.id } ) }}">{{groupe.name}}</a>
+		</h2>
+
+	{% endfor %}
+
+{% endblock %}
